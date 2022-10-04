@@ -8,7 +8,7 @@ function App() {
 
     const initialList = [
         {
-          number: 1,
+          // number: 1,
           listItem: "Mow",
           description: "Grass is too long and need to mow by friday",
           author: "Ross",
@@ -17,7 +17,7 @@ function App() {
           completeDate: null
         },
         {
-          number: 2,
+          // number: 2,
           listItem: "Go to Hardware Store",
           description: "Get Blades, and Grass Seed",
           author: "Ross",

@@ -27,7 +27,7 @@ export default function CreatePost({ user, posts, dispatch }) {
       <div>
 
         <div>
-          Item Number: {number}
+          {/* Item Number: {number} */}
         </div>
         <div>
           Author: <b>{user}</b>
@@ -40,6 +40,7 @@ export default function CreatePost({ user, posts, dispatch }) {
             id="create-title"
             value={listItem}
             onChange={(event) => setItem(event.target.value)}
+            required
           />
         </div>
         <textarea
