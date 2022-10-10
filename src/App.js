@@ -1,8 +1,9 @@
 import appReducer from "./reducers";
 import { useReducer } from "react";
-import RenderHome from "./RenderHome";
+import { v4 as uuidv4 } from "uuid";
 
 import './App.css';
+import Main from "./Main";
 
 function App() {
 
@@ -14,7 +15,8 @@ function App() {
           author: "Ross",
           done: null,
           createDate: "Sat Aug 01 2022",
-          completeDate: null
+          completeDate: null,
+          id: uuidv4()
         },
         {
           // number: 2,
@@ -23,7 +25,8 @@ function App() {
           author: "Ross",
           done: null,
           createDate: "Mon Jul 17 2022",
-          completeDate: null
+          completeDate: null,
+          id: uuidv4()
         },
       ];
 
@@ -43,7 +46,7 @@ function App() {
        <div className="App-header">
         <h2>To-do List</h2>
       </div>
-    <RenderHome user={state.user} posts={state.posts} dispatch={dispatch}  />
+    <Main user={state.user} posts={state.posts} dispatch={dispatch}  />
     </div>
       )
   }

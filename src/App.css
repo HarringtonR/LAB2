@@ -113,3 +113,17 @@
   display: flex;
   flex-direction: row;
 }
+
+.delete{
+    border: none;
+    margin: 1rem;
+    border-radius: 5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.delete:hover{
+  background-color: crimson;
+  opacity: .8;
+  transition: .5s;
+}

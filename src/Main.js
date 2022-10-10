@@ -1,11 +1,11 @@
-import UserBar from "./user/UserBar";
-import PostList from "./post/PostList";
-import CreatePost from "./post/CreatePost";
+import UserBar from "./components/user/UserBar";
+import PostList from "./components/post/PostList";
+import CreatePost from "./components/post/CreatePost";
 
 
 
 
-export default function RenderHome({ user, posts, dispatch }){
+export default function Main({ user, posts, dispatch }){
 
 
     if(user){
@@ -14,13 +14,13 @@ export default function RenderHome({ user, posts, dispatch }){
           <div className="App-Login ">
           <UserBar user={user} dispatch={dispatch} />
           </div>
-            <body className="App-Body">
+            <div className="App-Body">
             {user && (
                 <CreatePost user={user} posts={posts} dispatch={dispatch} />
             )}
-              <PostList posts={posts} />
+              <PostList posts={posts} dispatch={dispatch}/>
          
-          </body>
+          </div>
         </div>  
         )
     }else{

@@ -10,7 +10,7 @@ function userReducer(state, action) {
   }
 }
 
-function postReducer(state, action) {
+function todoReducer(state, action) {
   switch (action.type) {
     case "CREATE_POST":
       const newPost = {
@@ -20,9 +20,17 @@ function postReducer(state, action) {
         author: action.author,
         done: action.done,
         createDate: action.createDate,
-        completeDate: action.completeDate
+        completeDate: action.completeDate,
+        id: action.id
       };
-      return [...state, newPost];
+      return [newPost, ...state];
+    case "DELETE_POST":
+      // const newList = [...state].filter(i => i.id !== action.id );
+        // console.log([...state].filter(i => i.id !== action.id ))
+        // console.log(action.id)
+
+        return [...state].filter(i => i.id !== action.id );
+        // return [...state];
     default:
       return state;
   }
@@ -31,6 +39,6 @@ function postReducer(state, action) {
 export default function appReducer(state, action) {
   return {
     user: userReducer(state.user, action),
-    posts: postReducer(state.posts, action),
+    posts: todoReducer(state.posts, action),
   };
 }

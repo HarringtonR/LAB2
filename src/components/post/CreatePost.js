@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 
 export default function CreatePost({ user, posts, dispatch }) {
   const today = new Date();
@@ -9,7 +10,7 @@ export default function CreatePost({ user, posts, dispatch }) {
   const [number] = useState(maxPost);
   const [listItem, setItem] = useState("");
   const [description, setDescription] = useState("");
-  const [done] = useState(false);
+  // const [done] = useState(false);
   const [createDate] = useState(dt);
   const [completeDate] = useState("");
 
@@ -19,8 +20,16 @@ export default function CreatePost({ user, posts, dispatch }) {
     <form className="newPost"
       onSubmit={(e) => {
         e.preventDefault();
-        dispatch({ type: "CREATE_POST", number, listItem, description, author: user, done: false,  createDate, completeDate });
-      
+        dispatch({ 
+          type: "CREATE_POST",
+          number, listItem,
+          description,
+          author: user,
+          createDate,
+          completeDate,
+          id: uuidv4()
+        
+        });
       }}
     >
       <div className="newPost">
