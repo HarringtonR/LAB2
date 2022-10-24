@@ -1,0 +1,139 @@
+.App {
+  text-align: center;
+}
+
+.App-Body{
+  background-color: #fdfdfd;
+  min-height: 80vh;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+
+.App-header {
+  background-color: #282c34;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.App-Login {
+  background-color: #282c34;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  text-align: left;
+}
+
+
+.App-link {
+  color: #61dafb;
+}
+
+
+
+
+.newPostForm{
+  margin:3rem;
+}
+
+
+.renderPost{
+border-top: 1px solid rgba(0, 0, 0, .5);
+
+  padding: .5rem;
+  margin: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.renderPostText{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-right: 2rem;
+  width: 50vw;
+}
+
+
+.checkBox{
+  width:50px;
+  height: 55px;
+}
+
+
+
+.newPost{
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+align-items: center;
+}
+.newPost input{
+  border: 2px solid #282c34;
+  border-radius: 5px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-right:2rem;
+  min-width: 500px;
+
+}
+
+.newPost textarea{
+  border: 2px solid #282c34;
+  border-radius: 5px;
+  padding-right:2rem;
+  min-width: 500px;
+
+
+}
+
+.submitButton{    
+  font-weight: 800;
+  padding: 0rem 4rem;
+  background: gainsboro;
+  width: 500px;
+ } 
+.submitButton:hover{
+  opacity: .6;
+  transition: .2s;
+}
+
+.logout{
+  display: flex;
+}
+.logout input{
+  margin-left: 1rem;
+  border-radius: 25px;
+
+}
+
+.logout input:hover{
+  opacity: .6;
+  transition: .2s;
+}
+
+.userBar form{
+  margin: 1rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.delete{
+    border: none;
+    margin: 1rem;
+    border-radius: 5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.delete:hover{
+  background-color: crimson;
+  opacity: .8;
+  transition: .5s;
+}
