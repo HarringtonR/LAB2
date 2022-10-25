@@ -5,7 +5,7 @@ import { useContext } from "react";
 
 import { StateContext } from "../../contexts";
 
-export default function UserBar({}) {
+export default function UserBar() {
   const { state } = useContext(StateContext);
 
   if (state.user) {

@@ -1,124 +1,202 @@
 {
   "posts": [
     {
-      "id": 1,
-      "listItem": "portal",
-      "description": " description",
-      "author": "ross@test.com"
+      "listItem": "Test",
+      "description": "Test1",
+      "author": "ross@test.com",
+      "createDate": "Mon Oct 24 2022",
+      "completeDate": "Tue Oct 25 2022",
+      "done": true,
+      "id": 2
     },
     {
-      "listItem": " old post",
-      "description": " new description",
+      "listItem": "Test3",
+      "description": "test3",
       "author": "ross@test.com",
+      "createDate": "Mon Oct 11 2022",
+      "completeDate": "",
+      "done": false,
       "id": 3
     },
     {
-      "listItem": "A new post",
-      "description": " new description",
+      "listItem": "Test!",
+      "description": "Test",
       "author": "ross@test.com",
+      "createDate": "Mon Oct 14 2022",
+      "completeDate": "",
+      "done": false,
       "id": 4
     },
     {
-      "listItem": "test",
-      "description": "test",
-      "author": "test@test.com",
+      "listItem": "Test!",
+      "description": "Test",
+      "author": "ross@test.com",
+      "createDate": "Mon Oct 18 2022",
+      "completeDate": "Tue Oct 25 2022",
+      "done": false,
       "id": 5
     },
     {
-      "listItem": "test 2",
-      "description": "test",
-      "author": "test@test.com",
+      "listItem": "Test!",
+      "description": "Test",
+      "author": "ross@test.com",
+      "createDate": "Mon Oct 17 2022",
+      "completeDate": "Tue Oct 25 2022",
+      "done": false,
       "id": 6
     },
     {
-      "listItem": "test2",
-      "description": "test2",
-      "author": "test@test.com",
+      "listItem": "Test!",
+      "description": "Test",
+      "author": "ross@test.com",
+      "createDate": "Mon Oct 15 2022",
+      "completeDate": "",
+      "done": false,
       "id": 7
     },
     {
-      "listItem": "test3",
-      "description": "test3",
-      "author": "test@test.com",
+      "listItem": "Test!",
+      "description": "Test",
+      "author": "ross@test.com",
+      "createDate": "Mon Oct 7 2022",
+      "completeDate": "Tue Oct 25 2022",
+      "done": false,
       "id": 8
     },
     {
-      "listItem": "test",
-      "description": "test",
-      "author": "test@test.com",
+      "listItem": "Test!",
+      "description": "Test",
+      "author": "ross@test.com",
+      "createDate": "Mon Oct 6 2022",
+      "completeDate": "Tue Oct 25 2022",
+      "done": false,
       "id": 9
     },
     {
-      "listItem": "test",
-      "description": "test",
-      "author": "test@test.com",
+      "listItem": "Test",
+      "description": "Test",
+      "author": "ross@test.com",
+      "createDate": "Mon Oct 6 2022",
+      "completeDate": "Tue Oct 25 2022",
+      "done": true,
       "id": 10
     },
     {
-      "listItem": "test",
-      "description": "test",
-      "author": "test@test.com",
+      "listItem": "Test",
+      "description": "Test",
+      "author": "ross@test.com",
+      "createDate": "Mon Oct 5 2022",
+      "completeDate": "Mon Oct 24 2022",
+      "done": true,
       "id": 11
     },
     {
-      "listItem": "test",
-      "description": "test",
-      "author": "test@test.com",
+      "listItem": "Test",
+      "description": "Test",
+      "author": "ross@test.com",
+      "createDate": "Mon Oct 4 2022",
+      "completeDate": "Mon Oct 24 2022",
+      "done": true,
       "id": 12
     },
     {
-      "listItem": "test",
-      "description": "test",
-      "author": "test@test.com",
+      "listItem": "Test",
+      "description": "Test",
+      "author": "ross@test.com",
+      "createDate": "Mon Oct 2 2022",
+      "completeDate": "Mon Oct 24 2022",
+      "done": true,
       "id": 13
     },
     {
       "listItem": "test",
-      "description": "test",
-      "author": "test@test.com",
+      "description": "test1231313",
+      "author": "ross@test.com",
+      "createDate": "Mon Oct 24 2022",
+      "completeDate": "Tue Oct 25 2022",
+      "done": true,
       "id": 14
     },
     {
-      "listItem": "test",
-      "description": "test",
-      "author": "test@test.com",
+      "listItem": "t",
+      "description": "t1",
+      "author": "ross@test.com",
+      "createDate": "Mon Oct 24 2022",
+      "completeDate": "Tue Oct 25 2022",
+      "done": true,
       "id": 15
     },
     {
-      "listItem": "test",
-      "description": "test",
-      "author": "test@test.com",
+      "listItem": "test final",
+      "description": "date check test\n",
+      "author": "ross@test.com",
+      "createDate": "Mon Oct 1 2022",
+      "completeDate": "Tue Oct 25 2022",
+      "done": true,
       "id": 16
     },
     {
-      "listItem": "test22",
-      "description": "test22",
-      "author": "test@test.com",
+      "listItem": "na",
+      "description": "na",
+      "author": "ross@test.com",
+      "createDate": "Mon Oct 24 2022",
+      "completeDate": "Tue Oct 25 2022",
+      "done": true,
       "id": 17
     },
     {
-      "listItem": "test22",
-      "description": "test",
-      "author": "test@test.com",
+      "listItem": "fdsafa",
+      "description": "asdfasf",
+      "author": "ross@test.com",
+      "createDate": "Mon Oct 24 2022",
+      "completeDate": "Tue Oct 25 2022",
+      "done": true,
       "id": 18
     },
     {
-      "listItem": "test223",
-      "description": "test",
-      "author": "test@test.com",
+      "listItem": "j",
+      "description": "klkk",
+      "author": "ross@test.com",
+      "createDate": "Tue Oct 25 2022",
+      "completeDate": "",
+      "done": false,
       "id": 19
     },
     {
-      "listItem": "test",
-      "description": "test12",
-      "author": "afsda@test.com",
+      "listItem": "dsfad",
+      "description": "asdfas",
+      "author": "ross@test.com",
+      "createDate": "Tue Oct 25 2022",
+      "completeDate": "Tue Oct 25 2022",
+      "done": true,
       "id": 20
     },
     {
-      "listItem": "new test!",
-      "description": "working?",
+      "listItem": "dsfad",
+      "description": "asdfas",
       "author": "ross@test.com",
+      "createDate": "Tue Oct 25 2022",
+      "completeDate": "Tue Oct 25 2022",
+      "done": true,
       "id": 21
+    },
+    {
+      "listItem": "Date Complete Test",
+      "description": "this is a test for the compelted date",
+      "author": "ross@test.com",
+      "createDate": "Tue Oct 25 2022",
+      "completeDate": "Tue Oct 25 2022",
+      "done": true,
+      "id": 22
+    },
+    {
+      "listItem": "new post update tes",
+      "description": "new date test",
+      "author": "ross@test.com",
+      "createDate": "Tue Oct 25 2022",
+      "completeDate": "Tue Oct 25 2022",
+      "done": true,
+      "id": 23
     }
   ],
   "users": [
@@ -136,6 +214,21 @@
       "email": "ross@test.com",
       "password": "$2a$10$XXX1a.IPHSQ/0GUtPPDpM.xWR9pAGol0esEBuzLfI03RTsdLTp1tS",
       "id": 4
+    },
+    {
+      "email": "george@test.com",
+      "password": "$2a$10$4oM.7a8jNfqQyVMpcCRXX.P1A5l1HVln2g0t2Ir1RmoXxcRZuWB1W",
+      "id": 5
+    },
+    {
+      "email": "time@test",
+      "password": "$2a$10$Qt4k3HFTa5awPhiSQWj4/.QJP/nq4QsG6dV4Wu1k4neZOL9scPKyO",
+      "id": 6
+    },
+    {
+      "email": "tim@yahoo.com",
+      "password": "$2a$10$dvwnKbYXhaIu8d0hqg2KIuvFAij9ryg8fKSrElrFBhWFanhmcQtzO",
+      "id": 7
     }
   ],
   "themes": [

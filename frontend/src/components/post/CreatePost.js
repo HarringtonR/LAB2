@@ -15,16 +15,17 @@ export default function CreatePost() {
   const [description, setDescription] = useState("");
   const [createDate] = useState(dt);
   const [completeDate] = useState("");
+  const [done, setDone] = useState(false);
   const [error, setError] = useState(false);
 
   const { state, dispatch } = useContext(StateContext);
   const { user } = state;
 
   const [posts, createPost] = useResource(
-    ({ listItem, description, author }) => ({
+    ({ listItem, description, author, createDate, completeDate, done }) => ({
       url: "/posts",
       method: "post",
-      data: { listItem, description, author },
+      data: { listItem, description, author, createDate, completeDate, done },
     })
   );
 
@@ -33,7 +34,14 @@ export default function CreatePost() {
       className="newPost"
       onSubmit={(e) => {
         e.preventDefault();
-        createPost({ listItem, description, author: user });
+        createPost({
+          listItem,
+          description,
+          author: user,
+          createDate,
+          completeDate,
+          done,
+        });
         dispatch({
           type: "CREATE_POST",
           // number,
@@ -42,6 +50,7 @@ export default function CreatePost() {
           author: user,
           createDate,
           completeDate,
+          done,
           id: uuidv4(),
         });
       }}

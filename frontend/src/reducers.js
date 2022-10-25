@@ -25,11 +25,9 @@ function todoReducer(state, action) {
       };
       return [newPost, ...state];
     case "DELETE_POST":
-      // const newList = [...state].filter(i => i.id !== action.id );
-      // console.log([...state].filter(i => i.id !== action.id ))
-      // console.log(action.id)
       return [...state].filter((i) => i.id !== action.id);
-    // return [...state];
+    case "UPDATE_POST":
+      return [...state];
     case "FETCH_POSTS":
       return action.posts;
     default:
