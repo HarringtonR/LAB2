@@ -2,12 +2,12 @@ import React, { useEffect, useReducer } from "react";
 import { useResource } from "react-request-hook";
 import { StateContext } from "./contexts";
 import appReducer from "./reducers";
-
 import UserBar from "./components/user/UserBar";
-import PostList from "./components/post/PostList";
+// import PostList from "./components/post/PostList";
 import CreatePost from "./components/post/CreatePost";
-
 import "./App.css";
+
+const PostList = React.lazy(() => import("./components/post/PostList"));
 
 function App() {
   const initialToDo = [];
@@ -54,7 +54,9 @@ function App() {
               </div>
               <div className="App-Body">
                 {state.user && <CreatePost />}
-                <PostList />
+                <React.Suspense fallback={"Loading..."}>
+                  <PostList />
+                </React.Suspense>
               </div>
             </div>
           </div>
