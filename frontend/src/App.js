@@ -65,10 +65,17 @@ function App() {
     );
   } else {
     return (
-      <div className="App-Login ">
-        <StateContext.Provider value={{ state, dispatch }}>
-          <UserBar />
-        </StateContext.Provider>
+      <div>
+        <div className="App-header">
+          <h2>To-do List</h2>
+        </div>
+        <div>
+          <div className="App-Login ">
+            <StateContext.Provider value={{ state, dispatch }}>
+              <UserBar />
+            </StateContext.Provider>
+          </div>
+        </div>
       </div>
     );
   }
