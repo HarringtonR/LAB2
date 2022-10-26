@@ -29,6 +29,12 @@ export default function CreatePost() {
     })
   );
 
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+
+  //   console.log("form submitted ✅");
+  // };
+
   return (
     <form
       className="newPost"
@@ -68,14 +74,16 @@ export default function CreatePost() {
               name="create-title"
               id="create-title"
               value={listItem}
-              onChange={(event) => setItem(event.target.value)}
+              onChange={(e) => setItem(e.target.value)}
+              autoComplete="off"
               required
             />
           </div>
           <textarea
             placeholder="Description...."
             value={description}
-            onChange={(event) => setDescription(event.target.value)}
+            onChange={(e) => setDescription(e.target.value)}
+            autoComplete="off"
           />
         </div>
         <input

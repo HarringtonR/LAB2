@@ -56,8 +56,8 @@ export default function Login() {
           type="password"
           value={password}
           onChange={handlePassword}
-          name="login-username"
-          id="login-username"
+          name="login-password"
+          id="login-password"
         />
         {/* <label htmlFor="login-password">Password:</label> */}
         {/* <input type="password" name="login-password" id="login-password" /> */}

@@ -32,8 +32,11 @@
   color: #61dafb;
 }
 
+form label{
+  padding-right: 1rem;
+  padding-left: 1rem;
 
-
+}
 
 .newPostForm{
   margin:3rem;
@@ -41,7 +44,7 @@
 
 
 .renderPost{
-border-top: 1px solid rgba(0, 0, 0, .5);
+  border-top: 1px solid rgba(0, 0, 0, .5);
 
   padding: .5rem;
   margin: 2rem;
