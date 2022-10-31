@@ -14,7 +14,7 @@
       "description": "test3",
       "author": "ross@test.com",
       "createDate": "Mon Oct 11 2022",
-      "completeDate": "",
+      "completeDate": "Sun Oct 30 2022",
       "done": false,
       "id": 3
     },
@@ -23,7 +23,7 @@
       "description": "Test",
       "author": "ross@test.com",
       "createDate": "Mon Oct 14 2022",
-      "completeDate": "",
+      "completeDate": "Sun Oct 30 2022",
       "done": false,
       "id": 4
     },
@@ -32,7 +32,7 @@
       "description": "Test",
       "author": "ross@test.com",
       "createDate": "Mon Oct 18 2022",
-      "completeDate": "Tue Oct 25 2022",
+      "completeDate": "Sun Oct 30 2022",
       "done": false,
       "id": 5
     },
@@ -212,7 +212,7 @@
       "description": "t2",
       "author": "ross@test.com",
       "createDate": "Tue Oct 25 2022",
-      "completeDate": "",
+      "completeDate": "Sun Oct 30 2022",
       "done": false,
       "id": 25
     },
@@ -239,8 +239,8 @@
       "description": "",
       "author": "ross@test.com",
       "createDate": "Tue Oct 25 2022",
-      "completeDate": "",
-      "done": false,
+      "completeDate": "Sun Oct 30 2022",
+      "done": true,
       "id": 32
     },
     {
@@ -248,9 +248,18 @@
       "description": "with text\n",
       "author": "ross@test.com",
       "createDate": "Tue Oct 25 2022",
-      "completeDate": "Tue Oct 25 2022",
+      "completeDate": "Sun Oct 30 2022",
       "done": true,
       "id": 33
+    },
+    {
+      "listItem": "to do test item",
+      "description": "to do test item",
+      "author": "ross@test.com",
+      "createDate": "Sun Oct 30 2022",
+      "completeDate": "Sun Oct 30 2022",
+      "done": true,
+      "id": 34
     }
   ],
   "users": [
