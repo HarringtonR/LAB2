@@ -4,7 +4,6 @@ import App from "./App";
 import { RequestProvider } from "react-request-hook";
 import axios from "axios";
 import "./index.css";
-
 const axiosInstance = axios.create({
   baseURL: "http://localhost:3000/api/",
 });
