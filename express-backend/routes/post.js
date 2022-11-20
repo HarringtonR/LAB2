@@ -1,8 +1,9 @@
 const express = require("express");
 const jwt = require("jsonwebtoken");
 const Post = require("../models/Post");
+require("dotenv").config();
 
-const privateKey = ``;
+const privateKey = `${process.env.Express_PrivateKey}`;
 
 const router = express.Router();
 
@@ -24,18 +25,24 @@ router.use(function (req, res, next) {
 
 router.post("/", async function (req, res) {
   const post = new Post({
-    title: req.body.title,
-    content: req.body.content,
+    listItem: req.body.listItem,
+    description: req.body.description,
     author: req.payload.id,
+    done: req.body.done,
+    createDate: req.body.createDate,
+    completeDate: req.body.completeDate,
   });
   return post
     .save()
     .then((savedPost) => {
       return res.status(201).json({
         _id: savedPost._id,
-        title: savedPost.title,
-        content: savedPost.content,
+        listItem: savedPost.listItem,
+        description: savedPost.description,
         author: savedPost.author,
+        done: savedPost.done,
+        createDate: savedPost.createDate,
+        completeDate: savedPost.completeDate,
       });
     })
     .catch((error) => {

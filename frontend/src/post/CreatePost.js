@@ -1,8 +1,8 @@
-import { v4 as uuidv4 } from "uuid";
-import { useState, useContext } from "react";
+// import { v4 as uuidv4 } from "uuid";
+import { useState, useContext, useEffect } from "react";
 import { useResource } from "react-request-hook";
 
-import { StateContext } from "../../contexts";
+import { StateContext } from "../contexts";
 
 export default function CreatePost() {
   const today = new Date();
@@ -16,28 +16,50 @@ export default function CreatePost() {
   const [createDate] = useState(dt);
   const [completeDate] = useState("");
   const [done, setDone] = useState(false);
-  const [error, setError] = useState(false);
+  // const [error, setError] = useState(false);
 
   const { state, dispatch } = useContext(StateContext);
   const { user } = state;
 
-  const [posts, createPost] = useResource(
+  const [post, createPost] = useResource(
     ({ listItem, description, author, createDate, completeDate, done }) => ({
-      url: "/posts",
+      url: "/post",
       method: "post",
-      data: { listItem, description, author, createDate, completeDate, done },
+      headers: { Authorization: `${state.user.access_token}` },
+      data: { listItem, description, createDate, completeDate, done },
     })
   );
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-
-  //   console.log("form submitted ✅");
-  // };
+  useEffect(() => {
+    if (post.isLoading === false && post.data) {
+      dispatch({
+        type: "CREATE_POST",
+        id: post.data.id,
+        listItem: post.data.listItem,
+        description: post.data.description,
+        author: user.username,
+        createDate,
+        completeDate,
+        done,
+      });
+    }
+  }, [post]);
 
   return (
     <form
-      className="newPost"
+      onSubmit={(e) => {
+        e.preventDefault();
+        createPost({
+          listItem,
+          description,
+          author: user,
+          createDate,
+          completeDate,
+          done,
+        });
+      }}
+    >
+      {/* className="newPost"
       onSubmit={(e) => {
         e.preventDefault();
         createPost({
@@ -60,12 +82,12 @@ export default function CreatePost() {
           id: uuidv4(),
         });
       }}
-    >
+    > */}
       <div className="newPost">
         <div>
           <div>{/* Item Number: {number} */}</div>
           <div>
-            Author: <b>{user}</b>
+            Author: <b>{user.username}</b>
           </div>
           <div>
             <input

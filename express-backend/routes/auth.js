@@ -1,6 +1,7 @@
 const express = require("express");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
+require("dotenv").config();
 
 const User = require("../models/User");
 
@@ -8,7 +9,7 @@ const router = express.Router();
 
 const saltRounds = 10;
 // DO NOT COMMIT THIS TO GIT
-const privateKey = ``;
+const privateKey = `${process.env.Express_PrivateKey}`;
 
 router.use(function (req, res, next) {
   bcrypt.genSalt(saltRounds, function (err, salt) {
@@ -20,6 +21,9 @@ router.use(function (req, res, next) {
 });
 
 router.post("/login", async function (req, res, next) {
+  // console.log(req.body.username);
+  // console.log(req.body.password);
+
   if (req.body.username && req.body.password) {
     const user = await User.findOne()
       .where("username")
@@ -70,6 +74,7 @@ router.post("/register", async function (req, res, next) {
           });
         })
         .catch((error) => {
+          console.log(error);
           return res.status(500).json({ error: "Something went wrong." });
         });
     }

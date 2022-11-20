@@ -3,12 +3,22 @@
 }
 
 .App-Body{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   background-color: #fdfdfd;
   min-height: 80vh;
   max-width: 600px;
   margin: 0 auto;
+
 }
 
+.createNewItem{
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  font-size: 2rem;
+}
 
 .App-header {
   background-color: #282c34;
