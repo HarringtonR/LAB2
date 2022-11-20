@@ -27,11 +27,12 @@ function Post({
     data: { id: id },
   }));
 
-  // const [, updatePost] = useResource(({ _id, dt }) => ({
-  //   url: `/posts/${_id}`,
-  //   method: "PATCH",
-  //   data: { completeDate: dt, done: !switchText },
-  // }));
+  const [, updatePost] = useResource(({ id, dt }) => ({
+    url: `/update/${id}`,
+    method: "PATCH",
+    headers: { Authorization: `${state.user.access_token}` },
+    data: { completeDate: dt, done: !switchText },
+  }));
 
   // const [posts, getPosts] = useResource(() => ({
   //   url: `/posts/${_id}`,
@@ -68,12 +69,10 @@ function Post({
           >
             Remove
           </button>
-
-          {/* <button className="delete" onClick={(e) => {handleremove(e)}}>Remove</button> */}
         </div>
       </div>
       <div>
-        {/* {switchText ? "Completed" : "Incomplete"}
+        {switchText ? "Completed" : "Incomplete"}
         <input
           className="checkBox"
           type="checkbox"
@@ -91,7 +90,7 @@ function Post({
             setSwtichText(switchText);
           }}
           checked={switchText}
-        /> */}
+        />
       </div>
     </div>
   );
