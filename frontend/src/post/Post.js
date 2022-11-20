@@ -3,21 +3,6 @@ import { useContext, useState, useEffect } from "react";
 import { StateContext } from "../contexts";
 import { useResource } from "react-request-hook";
 
-// function handleRemove(e) {
-//   const { state } = useContext(StateContext);
-//   fetch("http://localhost:3000/post/" + e._id, {
-//     headers: {
-//       "Access-Control-Allow-Credentials": true,
-//       "Access-Control-Allow-Origin": "*",
-//       "Content-Type": "application/json",
-//       Authorization: `${state.user.access_token}`,
-//     },
-//     method: "DELETE",
-//     body: e,
-//   });
-//   this.refs.list.forceUpdate();
-// }
-
 function Post({
   listItem,
   description,

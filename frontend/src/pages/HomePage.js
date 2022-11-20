@@ -3,7 +3,6 @@ import { StateContext } from "../contexts";
 import { useResource } from "react-request-hook";
 import PostList from "../post/PostList";
 import UserBar from "../user/UserBar";
-
 export default function HomePage() {
   const { state, dispatch } = useContext(StateContext);
 
@@ -21,15 +20,27 @@ export default function HomePage() {
       dispatch({ type: "FETCH_POSTS", posts: posts.data.posts.reverse() });
     }
   }, [posts]);
-  return (
-    <div>
-      <div className="App-Body">
-        <UserBar />
-        {/* <React.Suspense fallback={"Loading..."}>
-          <PostList />{" "}
-        </React.Suspense> */}
-        {posts?.isLoading && "Posts loading..."} <PostList />
-      </div>
-    </div>
-  );
+
+  if (state.user.username) {
+    return (
+      <>
+        <React.Suspense fallback={"Loading..."}>
+          <UserBar />
+        </React.Suspense>{" "}
+        <br />
+        <div>
+          {posts?.isLoading && "Posts loading..."} <PostList />
+        </div>
+      </>
+    );
+  } else {
+    return (
+      <>
+        <React.Suspense fallback={"Loading..."}>
+          <UserBar />
+        </React.Suspense>{" "}
+        <br />
+      </>
+    );
+  }
 }

@@ -1,18 +1,21 @@
 import React, { useState, useEffect, useReducer } from "react";
 import { useResource } from "react-request-hook";
-import { StateContext } from "./contexts";
-import { Outlet, Link } from "react-router-dom";
+import "./App.css";
+
+import CreatePost from "./post/CreatePost";
 
 import appReducer from "./reducers";
-import UserBar from "./user/UserBar";
-import CreatePost from "./post/CreatePost";
-import "./App.css";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Layout from "./pages/Layout";
 import HomePage from "./pages/HomePage";
 import PostPage from "./pages/PostPage";
+
+import { StateContext } from "./contexts";
+import UserBar from "./user/UserBar";
+import Logout from "./user/Logout";
+import Login from "./user/Login";
+import Register from "./user/Register";
 
 const PostList = React.lazy(() => import("./post/PostList"));
 
@@ -53,41 +56,19 @@ function App() {
   //   );
   // }
 
-  // if (user) {
-  //   return (
-  //     <div>
-  //       <StateContext.Provider value={{ state, dispatch }}>
-  //         <BrowserRouter>
-  //           <Routes>
-  //             <Route path="/" element={<Layout />}>
-  //               <Route index element={<HomePage />} />
-  //             </Route>
-  //               <Route index element={<HomePage />} />
-  //             <Route path="/post" element={<Layout />}>
-  //               <Route path="/post/create" element={<CreatePost />} />
-  //               <Route path="/post/:id" element={<PostPage />} />
-  //             </Route>
-  //           </Routes>
-  //         </BrowserRouter>
-  //       </StateContext.Provider>
-  //     </div>
-  //   );
-  // } else {
-  //   return (
-  //     <div>
-  //       <div className="App-header">
-  //         <h2>To-do List</h2>
-  //       </div>
-  //       <div>
-  //         <div className="App-Login ">
-  //           <StateContext.Provider value={{ state, dispatch }}>
-  //             <UserBar />
-  //           </StateContext.Provider>
-  //         </div>
-  //       </div>
-  //     </div>
-  //   );
-  // }
+  return (
+    <div>
+      <StateContext.Provider value={{ state, dispatch }}>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/post/create" element={<CreatePost />} />
+            <Route path="/post/:id" element={<PostPage />} />
+          </Routes>
+        </BrowserRouter>
+      </StateContext.Provider>
+    </div>
+  );
 
   // const [posts, getPosts] = useResource(() => ({
   //   url: "/posts",
@@ -103,20 +84,23 @@ function App() {
   // }, [posts]);
 
   // if (user) {
-  return (
-    <div>
-      <StateContext.Provider value={{ state, dispatch }}>
-        <BrowserRouter>
-          <Routes>
-            {/* <Route path="/" element={<Layout />} /> */}
-            <Route path="/" element={<HomePage />} />
-            <Route path="/post/create" element={<CreatePost />} />
-            <Route path="/post/:id" element={<PostPage />} />
-          </Routes>
-        </BrowserRouter>
-      </StateContext.Provider>
-    </div>
-  );
+  // return (
+  //   <div>
+  //     <StateContext.Provider value={{ state, dispatch }}>
+  //       <BrowserRouter>
+  //         <Routes>
+  //           <Route path="/" element={<Layout />}>
+  //             <Route index element={<HomePage />} />
+  //           </Route>
+  //           <Route path="/post" element={<Layout />}>
+  //             <Route path="/post/create" element={<CreatePost />} />
+  //             <Route path="/post/:id" element={<PostPage />} />
+  //           </Route>
+  //         </Routes>
+  //       </BrowserRouter>
+  //     </StateContext.Provider>
+  //   </div>
+  // );
   // } else {
   //   return (
   //     <div>

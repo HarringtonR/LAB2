@@ -34,9 +34,15 @@ router.post("/login", async function (req, res, next) {
         .compare(req.body.password, user.password)
         .then((result) => {
           if (result === true) {
-            const token = jwt.sign({ id: user._id }, privateKey, {
-              algorithm: "RS256",
-            });
+            const token = jwt.sign(
+              { id: user._id },
+              // { id: user._id, username: user.username },
+
+              privateKey,
+              {
+                algorithm: "RS256",
+              }
+            );
             return res
               .status(200)
               .json({ username: user.username, access_token: token });

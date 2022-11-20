@@ -38,9 +38,9 @@ export default function CreatePost() {
         listItem: post.data.listItem,
         description: post.data.description,
         author: user.username,
-        createDate,
-        completeDate,
-        done,
+        createDate: createDate,
+        completeDate: completeDate,
+        done: done,
       });
     }
   }, [post]);
