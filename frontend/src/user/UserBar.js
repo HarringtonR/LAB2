@@ -47,10 +47,10 @@ export default function UserBar() {
     );
   } else {
     return (
-      <>
+      <div className="login">
         <Login />
         <Register />
-      </>
+      </div>
     );
   }
 }

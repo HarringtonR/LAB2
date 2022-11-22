@@ -23,54 +23,20 @@ router.use(function (req, res, next) {
   }
   next();
 });
-// router.patch("/patch/:id", function (req, res, next) {
-//   Post.patch(
-//     {
-//       _id: req.params.id,
-//       completeDate: req.params.completeDate,
-//     },
-//     function (err, post) {
-//       console.log("Deleting Post " + req.params.id);
-//       res.json(post);
-//     }
-//   );
-// });
-
-// router.patch("/patch/:id", (req, res) => {
-//   Post.findByIdAndUpdate(req.post._id, req.body.completeDate)
-//     .then(() => {
-//       res.redirect("/");
-//     })
-//     .catch((e) => {
-//       console.log(e);
-//     });
-// });
 
 router.patch("/update/:id", function (req, res, next) {
-  console.log(req.params.completeDate);
-  console.log(req.params.done);
+  console.log(req.body.completeDate);
+  console.log(req.body.done);
 
   Post.findByIdAndUpdate(
     { _id: req.params.id },
-    { completeDate: req.params.completeDate },
-    { done: req.params.done },
+    { completeDate: req.body.completeDate, done: req.body.done },
+
     function (err, post) {
       console.log("Updating Post " + req.params.id);
       res.json(post);
     }
   );
 });
-
-// router.get("/", async function (req, res, next) {
-//   const posts = await Post.find().where("author").equals(req.payload.id).exec();
-//   //const posts = await Post.find().exec();
-//   return res.status(200).json({ posts: posts });
-// });
-
-// router.get("/:id", async function (req, res, next) {
-//   const post = await Post.findOne().where("_id").equals(req.params.id).exec();
-//   //const posts = await Post.find().exec();
-//   return res.status(200).json(post);
-// });
 
 module.exports = router;

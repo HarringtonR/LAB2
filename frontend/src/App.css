@@ -13,6 +13,13 @@
 
 }
 
+.logout{
+  padding: 2rem;
+}
+
+.login{
+  padding: 1rem;
+}
 .createNewItem{
   display: flex;
   justify-content: center;
@@ -53,6 +60,11 @@ form label{
   margin:3rem;
 }
 
+.postsListBody{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
 
 .renderPost{
   border-top: 1px solid rgba(0, 0, 0, .5);
@@ -61,7 +73,9 @@ form label{
   margin: 2rem;
   display: flex;
   justify-content: center;
+  max-width: 800px;
   align-items: center;
+  text-align: center;
 
 }
 
