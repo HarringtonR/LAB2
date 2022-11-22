@@ -33,20 +33,6 @@ export default function Login() {
       }
     }
   }, [user]);
-  // useEffect(() => {
-  //   if (user?.data?.user) {
-  //     setLoginFailed(false);
-  //     dispatch({
-  //       type: "LOGIN",
-  //       username: user.data.username,
-  //       access_token: user.data.access_token,
-  //     });
-  //   }
-  //   if (user?.error) {
-  //     console.log(user?.error);
-  //     setLoginFailed(true);
-  //   }
-  // }, [user]);
 
   return (
     <div>

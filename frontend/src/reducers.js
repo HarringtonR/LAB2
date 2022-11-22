@@ -17,7 +17,6 @@ function todoReducer(state, action) {
   switch (action.type) {
     case "CREATE_POST":
       const newPost = {
-        // number: action.number,
         listItem: action.listItem,
         description: action.description,
         author: action.author,
@@ -30,7 +29,6 @@ function todoReducer(state, action) {
     case "DELETE_POST":
       return [...state].filter((i) => i._id !== action.id);
     case "UPDATE_POST":
-      // return [action.id, action.completeDate, action.done, ...state];
       return [...state];
     case "FETCH_POSTS":
       return action.posts;

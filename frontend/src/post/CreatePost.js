@@ -59,30 +59,6 @@ export default function CreatePost() {
         });
       }}
     >
-      {/* className="newPost"
-      onSubmit={(e) => {
-        e.preventDefault();
-        createPost({
-          listItem,
-          description,
-          author: user,
-          createDate,
-          completeDate,
-          done,
-        });
-        dispatch({
-          type: "CREATE_POST",
-          // number,
-          listItem,
-          description,
-          author: user,
-          createDate,
-          completeDate,
-          done,
-          id: uuidv4(),
-        });
-      }}
-    > */}
       <div className="newPost">
         <div>
           <div>{/* Item Number: {number} */}</div>

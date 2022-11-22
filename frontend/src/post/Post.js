@@ -34,17 +34,6 @@ function Post({
     data: { completeDate: dt, done: !switchText },
   }));
 
-  // const [posts, getPosts] = useResource(() => ({
-  //   url: `/posts/${_id}`,
-  //   method: "GET",
-  // }));
-
-  // useEffect(() => {
-  //   if (posts && posts.data) {
-  //     dispatch({ type: "FETCH_POSTS", posts: posts.data.reverse() });
-  //   }
-  // }, [posts]);
-
   return (
     <div className="renderPost">
       <div className="renderPostText">
@@ -97,28 +86,3 @@ function Post({
 }
 
 export default React.memo(Post);
-
-// import React from "react";
-// import { Link } from "react-router-dom";
-
-// import { useContext } from "react";
-
-// function Post({ listItem, description, author, _id }) {
-//   console.log("Post rendered");
-//   return (
-//     <div>
-//       <Link to={`/post/${_id}`}>
-//         <h3 style={{ color: "black" }}>{listItem}</h3>
-//       </Link>
-
-//       <div>{description}</div>
-//       <br />
-//       <i>
-//         Written by <b>{author}</b>
-//       </i>
-//     </div>
-//   );
-// }
-
-// export default React.memo(Post);
-// //export default Post;

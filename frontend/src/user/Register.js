@@ -6,8 +6,6 @@ export default function Register() {
   const [password, setPassword] = useState("");
   const [passwordRepeat, setPasswordRepeat] = useState("");
 
-  // const { dispatch } = useContext(StateContext);
-
   function handlePassword(evt) {
     setPassword(evt.target.value);
   }
@@ -21,13 +19,6 @@ export default function Register() {
     method: "post",
     data: { username, password, passwordConfirmation: password },
   }));
-
-  // useEffect(() => {
-  //   if (user && user.data && user.data.user.email) {
-  //     //user.error === undefined
-  //     dispatch({ type: "REGISTER", username: user.data.user.email });
-  //   }
-  // }, [user]);
 
   useEffect(() => {
     if (user && user.isLoading === false && (user.data || user.error)) {
@@ -43,7 +34,6 @@ export default function Register() {
       onSubmit={(e) => {
         e.preventDefault();
         register(username, password);
-        //dispatch({ type: "REGISTER", username });
       }}
     >
       <label htmlFor="register-username">Username:</label>
