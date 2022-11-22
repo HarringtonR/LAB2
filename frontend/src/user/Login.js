@@ -62,8 +62,6 @@ export default function Login() {
           name="login-password"
           id="login-password"
         />
-        {/* <label htmlFor="login-password">Password:</label> */}
-        {/* <input type="password" name="login-password" id="login-password" /> */}
         <input type="submit" value="Login" disabled={username.length === 0} />
       </form>
     </div>
